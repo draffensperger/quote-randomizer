@@ -1,0 +1,14 @@
+      rm  app/controllers/quotes_controller_controller.rb
+      invoke  erb
+      rm    app/views/quotes_controller
+      invoke  test_unit
+      rm    test/controllers/quotes_controller_controller_test.rb
+      invoke  helper
+      rm    app/helpers/quotes_controller_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      rm      app/assets/javascripts/quotes_controller.coffee
+      invoke    scss
+      rm      app/assets/stylesheets/quotes_controller.scss
+
