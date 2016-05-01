@@ -1,11 +1,14 @@
+<p>
+  <%= link_to 'New Quote', new_quote_path, class: 'btn btn-lg btn-primary' %>
+  <%= link_to 'Random Combination', random_combination_path, class: 'btn btn-lg btn-default' %>
+</p>
+<div class="page-header">
+  <h3>Quotes</h3>
+</div>
+
 <% @quotes.each do |quote| %>
   <blockquote>
     <p><%= quote.text %></p>
     <footer><%= quote.author %></footer>
   </blockquote>
 <% end %>
-<hr>
-<p>
-  <%= link_to 'New Quote', new_quote_path, class: 'btn btn-lg btn-primary' %>
-  <%= link_to 'Random Combination', random_combination_path, class: 'btn btn-lg btn-default' %>
-</p>
