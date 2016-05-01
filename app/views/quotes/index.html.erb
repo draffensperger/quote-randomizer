@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1>Quotes</h1>
+</div>
+
+<p>
+  <%= button_to 'New Quote', new_quote_path, class: 'btn btn-lg btn-primary' %>
+</p>
+
+<% @quotes.each do |quote| %>
+  <blockquote><%= quote.text %></blockquote>
+<% end %>

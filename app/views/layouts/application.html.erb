@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TtApp</title>
+  <title>Famous Quotes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <h1>Famous Quotes</h1>
+    <p>
+      Simple Rails app to demo the
+      <a href="https://draffensperger/type_tracer">type_tracer</a> gem.
+    </p>
+  </div>
+
+  <%= yield %>
+</div>
 
 </body>
 </html>
