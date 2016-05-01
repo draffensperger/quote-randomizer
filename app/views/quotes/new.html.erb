@@ -1,20 +1,15 @@
 <%= form_for(@quote) do |f| %>
-  <p>
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </p>
-
-  <p>
-    <%= f.label :year %><br>
-    <%= f.text_field :year %>
-  </p>
-
-  <p>
+  <div class="form-group">
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+    <%= f.text_area :text, rows: 4, class: 'form-control' %>
+  </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-group">
+    <%= f.label :author %><br>
+    <%= f.text_field :author, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Create', class: 'btn btn-lg btn-primary' %>
+  </div>
 <% end %>
