@@ -1,10 +1,8 @@
-class RandomCombination
-  def initialize(quotes)
-    @quotes = quotes
-  end
+class RandomCombiner
+  def combine_two_quotes(quotes)
+    sentences = quotes.flat_map(&:sentences)
 
-  def random_combo
-    sentence1, sentence2 = random_sentence_pair
+    sentence1, sentence2 = random_sentence_pair(sentences)
 
     split_word = random_split_word(sentence1, sentence2)
     left = sentence1.split(split_word)[0]
@@ -20,7 +18,7 @@ class RandomCombination
     common_words[rand(common_words.size)] + ' '
   end
 
-  def random_sentence_pair
+  def random_sentence_pair(sentences)
     index1 = rand(sentences.size)
     index2 = rand_not_equal(sentences.size, index1)
     [sentences[index1], sentences[index2]]
@@ -31,9 +29,5 @@ class RandomCombination
       index = rand(size)
       return index if index != cannot_equal
     end
-  end
-
-  def sentences
-    @sentences ||= @quotes.flat_map(&:sentences)
   end
 end

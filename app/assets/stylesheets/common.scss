@@ -1,3 +1,20 @@
-.jumbotron .h1 {
-  font-size: 30px;
+h2 {
+  font-weight: bold;
+}
+body {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+blockquote {
+  font-size: 3.5em;
+  /*font-weight: bold;*/
+  footer {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.65em;
+    font-style: italic;
+  }
 }
