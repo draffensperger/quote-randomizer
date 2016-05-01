@@ -16,5 +16,6 @@ class QuotesController < ApplicationController
 
   def quote_params
     params.require(:quote).permit(:text, :author, :year)
+          .merge(user: current_user)
   end
 end

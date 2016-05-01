@@ -3,3 +3,7 @@ Style/Documentation:
 
 Metrics/LineLength:
   Max: 99
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
