@@ -5,10 +5,11 @@ class RandomCombination
 
   def random_combo
     sentence1, sentence2 = random_sentence_pair
-    split_word = random_split_word(sentence1, sentence2)
 
+    split_word = random_split_word(sentence1, sentence2)
     left = sentence1.split(split_word)[0]
     right = sentence2.split(split_word)[1]
+
     "#{left} #{split_word} #{right}."
   end
 
@@ -20,15 +21,15 @@ class RandomCombination
   end
 
   def random_sentence_pair
-    sentence1_index = rand_index(sentences.size)
-    sentence2_index = rand_index(sentences.size, sentence1_index)
-    [sentences[sentence1_index], sentences[sentence2_index]]
+    index1 = rand(sentences.size)
+    index2 = rand_not_equal(sentences.size, index1)
+    [sentences[index1], sentences[index2]]
   end
 
-  def rand_index(size, *excludes)
+  def rand_not_equal(size, cannot_equal)
     loop do
       index = rand(size)
-      return index unless index.in?(excludes)
+      return index if index != cannot_equal
     end
   end
 
