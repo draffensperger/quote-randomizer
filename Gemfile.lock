@@ -1,3 +1,10 @@
+PATH
+  remote: ../type_tracer
+  specs:
+    type_tracer (0.1.0)
+      activesupport
+      parser (>= 2.3.0.6, < 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -202,6 +209,7 @@ DEPENDENCIES
   spring
   sqlite3
   turbolinks
+  type_tracer!
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
