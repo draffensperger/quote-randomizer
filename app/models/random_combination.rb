@@ -15,9 +15,7 @@ class RandomCombination
   private
 
   def random_split_word(sentence1, sentence2)
-    words1 = sentence1.split
-    words2 = sentence2.split
-    common_words = words1 & words2
+    common_words = sentence1.split & sentence2.split
     common_words[rand(common_words.size)] + ' '
   end
 
@@ -27,14 +25,14 @@ class RandomCombination
     [sentences[sentence1_index], sentences[sentence2_index]]
   end
 
-  def sentences
-    @sentences ||= @quotes.map(&:text).flat_map { |t| t.split('.') }.map(&:strip)
-  end
-
   def rand_index(size, *excludes)
     loop do
       index = rand(size)
       return index unless index.in?(excludes)
     end
+  end
+
+  def sentences
+    @sentences ||= @quotes.flat_map(&:sentences)
   end
 end
