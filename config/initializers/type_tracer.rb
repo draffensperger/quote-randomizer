@@ -22,5 +22,6 @@ TypeTracer.config do |config|
 
   # On Heroku this will give the git commit. Knowing the git commit will let us
   # do better inference using the production traced types.
+  # This requires https://github.com/ianpurvis/heroku-buildpack-version
   config.git_commit = ENV['SOURCE_VERSION']
 end
