@@ -17,6 +17,7 @@ TypeTracer.config do |config|
   end
 
   config.type_sampler_root_path = Rails.root
+  config.type_sampler_path_regex = %r{\Aapp|lib/}
 
   # On Heroku this will give the git commit. Knowing the git commit will let us
   # do better inference using the production traced types.
