@@ -18,6 +18,7 @@ TypeTracer.config do |config|
 
   config.type_sampler_root_path = Rails.root
   config.type_sampler_path_regex = %r{\A(app|lib)/}
+  config.sampled_types_url = 'https://quote-randomizer.herokuapp.com/sampled_types'
 
   # On Heroku this will give the git commit. Knowing the git commit will let us
   # do better inference using the production traced types.
