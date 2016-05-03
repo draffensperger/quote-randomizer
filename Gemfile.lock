@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/draffensperger/type_tracer.git
-  revision: af28909acdd778978b55ad20d87b91412aa908c5
+  revision: 6083d9675e5d85d16eaefa5960f743983d64ad1a
   specs:
     type_tracer (0.1.0)
       activesupport (~> 4.2.6)
