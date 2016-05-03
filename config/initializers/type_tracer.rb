@@ -9,10 +9,12 @@ TypeTracer.config do |config|
 
   # Sample method types on every request
   config.sample_types_for_requests do |_rack_env|
-    # If you wanted to sample only certain requests you can do this:
+    # If you wanted to sample only a percentage of certain requests:
     # rand() > 0.5
 
-    # Sample types in non-test environments (dev and prod)
+    # You can also sample requests based on the passed in rack env
+
+    # For now just sample types in non-test environments (dev and prod)
     !Rails.env.test?
   end
 
