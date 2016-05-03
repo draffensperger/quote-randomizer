@@ -16,5 +16,9 @@ TypeTracer.config do |config|
     !Rails.env.test?
   end
 
-  config.type_sampler_root_path = Rails.root.join('app')
+  config.type_sampler_root_path = Rails.root
+
+  # On Heroku this will give the git commit. Knowing the git commit will let us
+  # do better inference using the production traced types.
+  config.git_commit = ENV['SOURCE_VERSION']
 end
