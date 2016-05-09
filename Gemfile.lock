@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/draffensperger/type_tracer.git
-  revision: f1c3e1d0525b663d34413db66616e1ad0e122ac4
+PATH
+  remote: ../type_tracer
   specs:
     type_tracer (0.1.0)
       activesupport (~> 4.2.6)
