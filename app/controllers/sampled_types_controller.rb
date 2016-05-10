@@ -1,5 +1,6 @@
 class SampledTypesController < ApplicationController
   def show
-    render json: JSON.pretty_generate(TypeTracer::TypeSampler.sampled_type_info)
+    type_info = TypeTracer::TypeSampler.sampled_type_info
+    render json: JSON.pretty_generate(type_info)
   end
 end
